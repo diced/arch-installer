@@ -242,7 +242,7 @@ arch-chroot /mnt /bin/bash -e <<EOF
   sudo systemctl enable bluetooth
 EOF
 
-# standard options with perf params5
+# standard options with perf params
 echo -e "\n\n$bold_color$fg[cyan]Generating refind menu (with perf params)...$reset_color"
 cat << EOF > /mnt/boot/refind_linux.conf
 "Boot with standard options"  "rw root=$root_part initrd=intel-ucode.img initrd=initramfs-linux-zen.img quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log_level=3 nowatchdog acpi_mask_gpe=0x6E"
